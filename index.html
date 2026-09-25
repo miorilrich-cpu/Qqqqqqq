@@ -20,12 +20,13 @@ tailwind.config = {
         sans: ['Mitr', 'sans-serif'],
       },
       colors: {
-        cream: '#FFF5F9', // พื้นหลังชมพูพาสเทลสว่าง
+        cream: '#FFF5F9',
         pinky: {
           light: '#FFE6F2',
-          DEFAULT: '#FF98CE', // สีหลักที่คุณกำหนด
+          DEFAULT: '#FF98CE',
           dark: '#E67BB3'
         },
+        heart: '#FFADD6', // สีหัวใจที่กำหนดใหม่
         purpley: {
           light: '#FFF0F7',
           DEFAULT: '#FFC2E2',
@@ -33,7 +34,7 @@ tailwind.config = {
         },
         brown: {
           light: '#C25287',
-          DEFAULT: '#A63C6F', // สีหัวข้อเข้มปานกลางนุ่มตา
+          DEFAULT: '#A63C6F',
           dark: '#852854'
         }
       },
@@ -80,7 +81,7 @@ body {
 }
 @keyframes float-reverse {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(15px) rotate(-8deg); }
+  50% { transform: translateY(-15px) rotate(-8deg); }
 }
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px) scale(1); }
@@ -140,7 +141,7 @@ body {
   </button>
 </div>
 
-<!-- Custom Theme SVGS -->
+<!-- Custom Theme SVGS (ปรับสีรูปหัวใจเป็น #FFADD6) -->
 <svg width="0" height="0" class="hidden absolute pointer-events-none">
   <symbol id="icon-teddy" viewBox="0 0 24 24" fill="currentColor">
     <circle cx="6" cy="7" r="3.5"/>
@@ -166,7 +167,7 @@ body {
     <path d="M38 39 L62 63 M62 39 L38 63" stroke="#FF98CE" stroke-width="8" stroke-linecap="round"/>
     <path d="M38 38 L62 62 M62 38 L38 62" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
   </symbol>
-  <symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="currentColor">
+  <symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FFADD6">
     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
   </symbol>
 </svg>
@@ -177,17 +178,17 @@ body {
   <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-70">
     <svg class="absolute top-[2%] left-[8%] w-10 h-10 text-pinky animate-float opacity-40" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[7%] right-[12%] w-9 h-9 animate-float-delayed opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-    <svg class="absolute top-[12%] left-[30%] w-6 h-6 text-pinky opacity-40 animate-float-reverse" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+    <svg class="absolute top-[12%] left-[30%] w-6 h-6 animate-float-reverse opacity-80" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
     <svg class="absolute top-[20%] right-[5%] w-14 h-14 text-pinky animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[26%] left-[6%] w-10 h-10 animate-float-delayed opacity-50" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-    <svg class="absolute top-[38%] left-[50%] w-7 h-7 text-pinky-light opacity-60 animate-float-reverse" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+    <svg class="absolute top-[38%] left-[50%] w-7 h-7 opacity-80 animate-float-reverse" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
     <svg class="absolute top-[43%] left-[4%] w-12 h-12 text-pinky animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[48%] right-[10%] w-11 h-11 animate-float-delayed opacity-70" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
     <svg class="absolute top-[65%] right-[6%] w-12 h-12 text-pinky animate-float-slow opacity-25" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[70%] left-[12%] w-8 h-8 animate-float-reverse opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
     <svg class="absolute top-[85%] left-[6%] w-11 h-11 text-pinky animate-float-delayed opacity-35" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
-    <svg class="absolute top-[82%] right-[22%] w-6 h-6 text-pinky opacity-40 animate-float" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-    <svg class="absolute top-[92%] right-[8%] w-12 h-12 animate-float-reverse opacity-70" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
+    <svg class="absolute top-[82%] right-[22%] w-6 h-6 opacity-80 animate-float" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+    <svg class="absolute top-[92%] right-[8%] w-12 h-12 animate-float-reverse opacity-70" viewBox="0 0 100 100"><use href="#icon-[#FFADD6]"></use></svg>
   </div>
 
   <!-- Header / Hero Section -->
@@ -197,8 +198,9 @@ body {
       <div class="w-24 h-24 rounded-2xl border-[4px] border-white shadow-md overflow-hidden bg-white flex items-center justify-center relative z-10">
         <img src="logo1.png" alt="Miori Shop Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFE6F2/A63C6F?text=Miori';">
       </div>
+      <!-- ไอคอนรูปหัวใจเปลี่ยนเป็นสี #FFADD6 -->
       <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm border-2 border-pinky-light group-hover:rotate-12 transition-transform z-20">
-        <i data-lucide="heart" class="w-4 h-4 text-brown fill-brown"></i>
+        <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
       </div>
     </div>
     <div class="flex-1 text-left relative z-10">
@@ -235,7 +237,7 @@ body {
       </div>
     </section>
 
-    <!-- Portfolio Section (อัปเดตชื่อและลิงก์ใหม่ทั้งหมด) -->
+    <!-- Portfolio Section -->
     <section class="bg-gradient-to-b from-pinky-light/70 to-purpley-light/70 rounded-3xl p-6 relative shadow-card border border-white">
       <svg class="absolute top-4 right-4 w-9 h-9 rotate-45 drop-shadow-sm opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
       <h2 class="text-xl font-medium mb-4 mt-2 text-center flex items-center justify-center gap-2 text-brown">
@@ -244,12 +246,11 @@ body {
       </h2>
       <p class="text-xs text-center text-brown-light mb-5">คลิกที่หมวดหมู่เพื่อดูลิงก์ตัวอย่าง</p>
       
-      <!-- สี่เหลี่ยมจัตุรัสมนๆ 6 ช่อง -->
       <div class="grid grid-cols-3 gap-3 relative z-10">
         <!-- 1. ป้ายแนวน่ารัก -->
         <a href="https://drive.google.com/drive/folders/1UTDDPZxwmZ9Bxld-wkRuboXRBQwRbe7g" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-cream border border-pinky-light flex items-center justify-center mb-1">
-            <i data-lucide="heart" class="w-5 h-5 text-brown"></i>
+            <i data-lucide="heart" class="w-5 h-5 text-heart fill-heart"></i>
           </div>
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายแนวน่ารัก</span>
         </a>
@@ -270,7 +271,7 @@ body {
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายแนวมืด</span>
         </a>
 
-        <!-- 4. ป้ายเรทราคา -->
+        <!-- 4. ป้ายเรทราคา (อัปเดตลิงก์ใหม่) -->
         <a href="https://drive.google.com/drive/folders/1AWD8J5JtZBSlQsgMHzVazxVKgum0810C" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-cream border border-pinky-light flex items-center justify-center mb-1">
             <i data-lucide="tag" class="w-5 h-5 text-brown"></i>
@@ -278,7 +279,7 @@ body {
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ป้ายเรทราคา</span>
         </a>
 
-        <!-- 5. ลายน้ำ -->
+        <!-- 5. ลายน้ำ (อัปเดตลิงก์ใหม่) -->
         <a href="https://drive.google.com/drive/folders/1qTde2_bAUL_qgsYfFlTgKC8TbHwmgtQe" target="_blank" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
             <i data-lucide="droplets" class="w-5 h-5 text-brown"></i>
@@ -286,7 +287,7 @@ body {
           <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center leading-tight">ลายน้ำ</span>
         </a>
 
-        <!-- 6. ฟอนต์ (คลิกแล้วเปิด Modal ฟอนต์ทั้ง 5 ตัว) -->
+        <!-- 6. ฟอนต์ -->
         <button onclick="openModal('fonts')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-pinky-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
             <i data-lucide="type" class="w-5 h-5 text-brown"></i>
@@ -330,7 +331,7 @@ body {
       </h2>
       <div class="bg-white rounded-3xl shadow-card p-6 space-y-4 border-2 border-pinky-light relative">
         <svg class="absolute top-4 right-4 w-8 h-8 -rotate-12 drop-shadow-sm" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-        <svg class="absolute top-1/2 -left-3 w-8 h-8 text-brown bg-white rounded-full drop-shadow-sm p-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+        <svg class="absolute top-1/2 -left-3 w-8 h-8 bg-white rounded-full drop-shadow-sm p-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
         
         <div class="flex items-end justify-between border-b border-dashed border-pinky/60 pb-3 relative z-10">
           <div>
@@ -424,7 +425,7 @@ body {
 
         <!-- กรอบขวา: กฎของร้าน -->
         <div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-pinky-light relative overflow-hidden flex flex-col justify-between">
-          <svg class="absolute -right-2 -bottom-2 w-8 h-8 text-pinky-light/40 pointer-events-none" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+          <svg class="absolute -right-2 -bottom-2 w-8 h-8 opacity-80 pointer-events-none" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
           <div>
             <h3 class="font-medium mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
               <i data-lucide="shield-alert" class="w-4 h-4 text-brown shrink-0"></i> กฎของร้าน
@@ -459,7 +460,7 @@ body {
       </button>
     </section>
 
-    <!-- Work parts -->
+    <!-- Work parts (อัปเดตลิงก์ใหม่ทั้ง 3 ปุ่ม) -->
     <section class="bg-white rounded-3xl p-5 border-2 border-dashed border-brown/40 shadow-sm text-center">
       <h3 class="font-medium text-brown text-sm flex items-center justify-center gap-1.5">
         <i data-lucide="sparkles" class="w-4 h-4 text-brown"></i> Work parts
@@ -468,7 +469,7 @@ body {
 
       <div class="grid grid-cols-3 gap-3">
         <!-- โพลารอยด์ 1: ˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚ -->
-        <a href="https://drive.google.com/drive/folders/14eGRjufzjTVdgKFyZKAZL_Ucotuq3WIu?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
+        <a href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1Qk" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-pinky-light flex items-center justify-center mb-2">
             <i data-lucide="dog" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
@@ -476,7 +477,7 @@ body {
         </a>
 
         <!-- โพลารอยด์ 2: ˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚ -->
-        <a href="https://drive.google.com/drive/folders/1EfG87-_uhPZ9wCeZAtnV3FKJgdzJO57H?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:rotate-2 active:scale-95 group">
+        <a href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTiD" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-pinky-light flex items-center justify-center mb-2">
             <i data-lucide="cat" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
@@ -484,7 +485,7 @@ body {
         </a>
 
         <!-- โพลารอยด์ 3: ˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚ -->
-        <a href="https://drive.google.com/drive/folders/1TPvtkQKp89HgEYJCHPVzOlMqwElLID9Y?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
+        <a href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-pinky-light flex items-center justify-center mb-2">
             <i data-lucide="piggy-bank" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
@@ -578,7 +579,7 @@ body {
   <!-- Footer / Contact Us -->
   <footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-pinky-light shadow-[0_-10px_20px_-5px_rgba(255,152,206,0.3)]">
     <h2 class="text-[15px] font-bold mb-6 mt-2 tracking-wider text-brown flex items-center justify-center gap-2 uppercase">
-      CONTACT US <i data-lucide="heart" class="w-4 h-4 text-brown fill-brown"></i>
+      CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
     </h2>
     <div class="flex flex-col items-center gap-3 mb-10">
       <div class="flex justify-center gap-3 w-full max-w-[280px]">
@@ -600,7 +601,7 @@ body {
 
 </div>
 
-<!-- Modal Portfolio (สำหรับหัวข้อ ฟอนต์) -->
+<!-- Modal Portfolio -->
 <div id="portfolioModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
   <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col max-h-[85vh] border-4 border-pinky-light relative">
     <svg class="absolute -top-4 -right-3 w-12 h-12 text-brown opacity-50 rotate-12 drop-shadow-sm z-10" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
@@ -699,7 +700,6 @@ body {
 <script>
 lucide.createIcons();
 
-// Portfolio Data (สำหรับหมวดฟอนต์)
 const portfolioData = {
   fonts: {
     title: "รายการฟอนต์",
